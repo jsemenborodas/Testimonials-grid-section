@@ -1,0 +1,229 @@
+:root{
+    --color-moderate-violet: hsl(263, 55%, 52%);
+    --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+    /*neutral*/
+    --color-light-gray: hsl(0, 0%, 81%);
+    --color-light-grayish-blue: hsl(210, 46%, 95%);
+    /*
+    Note for text colors:
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+    */
+
+    --font-size: 13px;
+}
+
+*{
+    font-family: 'Barlow Semi Condensed', serif;
+    /*Weights - 500&&600*/
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+body{
+    font-size: var(--font-size);
+    background-color: var(--color-light-grayish-blue);
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    max-height: 1966px ;
+    display: grid;
+    justify-content: center;
+    width: 87%;
+    margin: 0 auto;
+    gap: 25px;
+    padding-top: 71px;
+    padding-bottom: 71px;
+    grid-template-columns: 330px;
+    grid-template-rows: 444px 239px 220px 385px 435px;
+    background: transparent;
+}
+
+article{
+    box-sizing: border-box;
+}
+
+.card{
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px 32px;
+}
+
+.first{
+    background: url(./images/bg-pattern-quotation.svg), var(--color-moderate-violet);
+    background-repeat: no-repeat;
+    background-position: 88.6% 0%;
+}
+
+.second{
+    background-color: var(--color-very-dark-grayish-blue);
+}
+
+.third{
+    background-color: var(--color-white);
+}
+
+.fourth{
+    background-color: var(--color-very-dark-blackish-blue);
+}
+
+.fifth{
+    background-color: var(--color-white);
+}
+
+figure{
+    display: flex;
+}
+
+figcaption{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    color: var(--color-white);
+    font-size: 13.2px;
+    line-height: 1.3;
+}
+
+.name__black{
+    color: var(--color-very-dark-blackish-blue);
+    font-size: 13.2px;
+    margin-top: -3px;
+    line-height: 1.4;
+}
+
+figcaption p{
+    color: var(--color-light-gray);
+    font-size: 11.2px;
+}
+
+img{
+    border-radius: 50%;
+    width: 30px;
+}
+
+h2{
+    margin-top: 16px;
+    font-size: 1.25rem;
+    color: var(--color-white);
+}
+
+.heading__black{
+    color: var(--color-very-dark-grayish-blue);
+    font-size: 600;
+}
+
+.quote{
+    margin-top: 1rem;
+    font-size: 0.83rem;
+    margin-left: 2px;
+    line-height: 1.35;
+    width: 93%;
+}
+
+.quote__diff{
+    width: 100%;
+}
+
+.quote__diff_2{
+    width: 99%;
+}
+
+.quote__diff_3{
+    margin-top: 15px;
+    width: 98.5%;
+}
+
+.quote__white{
+    color: var(--color-light-gray);
+}
+
+@media (width >= 600px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+    }
+}
+
+@media (width >= 1100px) {
+        main{
+            grid-template-columns: 255px 260px 260px 255px;
+            grid-template-rows: 280px 265px;
+            grid-template-areas:
+            'a a b c'
+            'd f f c ';
+            margin-top: 6.5%;
+            max-width: 1110px;
+        }
+
+        .first{
+            grid-area: a;
+            background-position: 81% 0%;
+        }
+
+        .second{
+            grid-area: b;
+        }
+
+        .third{
+            grid-area: d;
+        }
+
+        .third h2{
+            margin-bottom: 24px;
+        }
+
+        .fourth{
+            grid-area: f;
+        }
+
+        .fourth h2{
+            margin-left: 2px;
+        }
+
+        .fifth{
+            grid-area: c;
+        }
+
+        .quote{
+            width: 100%;
+            margin-top: 14px;
+            margin-left: 0;
+        }
+
+        h2{
+            font-weight: 400;
+            font-size: 20.5px;
+            margin-top: 15px;
+        }
+
+        figcaption{
+            margin-left: 17px;
+        }
+
+        .quote__diff_2 {
+            margin-top: 23px;
+            width: 98%;
+        }
+        .quote__diff_3{
+            margin-top: 22px;
+            margin-left: 2px;
+        }
+
+
+}
