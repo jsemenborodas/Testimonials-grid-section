@@ -152,6 +152,15 @@ h2{
     color: var(--color-light-gray);
 }
 
+.card:hover{
+    transform: scale(1.1);
+    filter: hue-rotate(90deg);
+}
+
+.card:focus{
+    filter: opacity(20%);
+}
+
 @media (width >= 600px) {
     main{
         grid-template-columns: 1fr 1fr;
@@ -225,5 +234,12 @@ h2{
             margin-left: 2px;
         }
 
+        .card:hover{
+            transform: scale(1.1);
+            transform: translateY(-5%);
+            transition: transform 1s ease;
+            cursor: pointer;
+            filter: hue-rotate(0deg);
+        }
 
 }
